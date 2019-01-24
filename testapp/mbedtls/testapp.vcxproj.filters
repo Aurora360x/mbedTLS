@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="HttpManager\HttpClient\HTTPHeader.cpp">
+      <Filter>HttpManager\HttpClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\General.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpManager\HttpManager.cpp">
+      <Filter>HttpManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\HTTPTestApp.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Base\Application.cpp">
+      <Filter>Application\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="TestClass\TestClass.cpp" />
+    <ClCompile Include="HttpManager\HttpClient\HTTPCookieJar.cpp" />
+    <ClCompile Include="HttpManager\HttpClient\HTTPEndpoint.cpp">
+      <Filter>HttpManager\HttpClient</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="HttpManager\HttpClient\Base\HTTPStream.h">
+      <Filter>HttpManager\HttpClient\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpManager\HttpClient\Base\TCPStream.h">
+      <Filter>HttpManager\HttpClient\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpManager\HttpClient\Base\SSLStream.h">
+      <Filter>HttpManager\HttpClient\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpManager\HttpClient\HTTPHeader.h">
+      <Filter>HttpManager\HttpClient</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpManager\HttpClient\HTTPResponse.h">
+      <Filter>HttpManager\HttpClient</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpManager\HttpClient\HTTPTypes.h">
+      <Filter>HttpManager\HttpClient</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\General.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\MemoryBuffer.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\Uri.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\Timer.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpManager\HttpManager.h">
+      <Filter>HttpManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\HTTPTestApp.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Base\Application.h">
+      <Filter>Application\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="TestClass\TestClass.h" />
+    <ClInclude Include="HttpManager\HttpClient\HTTPCookieJar.h" />
+    <ClInclude Include="HttpManager\HttpClient\HTTPCookie.h" />
+    <ClInclude Include="HttpManager\HttpClient\HTTPEndpoint.h">
+      <Filter>HttpManager\HttpClient</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xex.xml" />
+    <None Include="Media\Fonts\Arial_16.xpr">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{948fa696-e5dc-452b-9ca1-11e341bef08f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{80aa93f4-a6bd-45ef-9cbf-f38cd7ab0288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpManager">
+      <UniqueIdentifier>{4235563e-7474-4f97-81a7-50c0e2c1db20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpManager\HttpClient">
+      <UniqueIdentifier>{351498dc-6033-4b16-b92e-dfdfbbf1ed03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpManager\HttpClient\Base">
+      <UniqueIdentifier>{6d894d8a-7e1d-4779-be34-2267d67f2806}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{4b593fe8-cc74-4724-bdba-7b15d8445c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Base">
+      <UniqueIdentifier>{c37cc822-d741-41c1-b6bd-9207ae3ab417}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestClass">
+      <UniqueIdentifier>{121fab54-2037-4694-9265-71a4f06711c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

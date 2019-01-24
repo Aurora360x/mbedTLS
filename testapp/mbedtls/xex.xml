@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xex>
+
+  <!-- Our Title ID -->
+  <!--<titleid id="0xFFFE07D1" />
+  <version major="2" minor="0" build="14699" qfe="0" />-->
+
+  <!-- Our xex privileges -->
+  <privilege id="0"/>
+  <!-- NoForceReboot -->
+  <privilege id="6"/>
+  <!-- InsecureSockets -->
+
+  <!-- Xex sections -->
+</xex>

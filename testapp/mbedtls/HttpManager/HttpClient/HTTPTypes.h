@@ -1,0 +1,96 @@
+#pragma once
+
+#define HTTP_DEBUG_LEVEL 1
+#define HTTP_DEBUG(lvl)		(lvl <= HTTP_DEBUG_LEVEL)
+
+#define HTTP_DEBUG_ERROR	HTTP_DEBUG(1)
+#define HTTP_DEBUG_WARNING	HTTP_DEBUG(2)
+#define HTTP_DEBUG_VERBOSE  HTTP_DEBUG(3)
+
+#define HTTP_OUTPUTPATH_MAXLEN	MAX_PATH
+
+#define HTTPLog(message, ...) printf("> "message"\n", __VA_ARGS__ )
+
+#define HTTP_REQUEST_VERSION		"HTTP/1.1"
+#define HTTP_REQUEST_USER_AGENT		"Xbox360 (Aurora HTTP Ver " "0.7b" ")"
+
+typedef enum HTTPENDPOINT_STATE 
+{
+	Idle,
+	Init,
+	OpenOutputFile,
+	SendingRequest,
+	RequestSent,
+	SendingInputHeader,
+	InputHeaderSent,
+	SendingInputBuffer,
+	InputFileSent,
+	InputFileSentFinal,
+	SendingInputFooter,
+	InputFooterSent,
+	ReceivingResponse,
+	ResponseHeaderAvailable,
+	ReceivingResponseHeader,
+	ReceivingResponseChunkHeader,
+	ReceivingResponseChunkFooter,
+	ReceivingResponseBody,
+	ResponseDataAvailable,
+	ResponseReceived,
+	Completed,
+	ErrorEncountered,
+	Canceled
+};
+
+#define HTTP_ERR_OK				 0
+#define HTTP_ERR_FAIL			-1
+#define HTTP_ERR_UNEXPECTED		-2
+#define HTTP_ERR_INVALIDARG		-3
+#define HTTP_ERR_OUTOFMEMORY	-4
+#define HTTP_ERR_CONNFAILED		-5
+#define HTTP_ERR_RECVFAILED		-6
+#define HTTP_ERR_NOTIMPL		-7
+#define HTTP_ERR_SENDFAILED		-8
+#define HTTP_ERR_FILECONFLICT	-9
+#define HTTP_ERR_WRITEFAILED	-10
+#define HTTP_ERR_FILEERROR		-11
+
+typedef enum HTTP_REQUEST_PRIORITY 
+{
+	HTTP_REQUEST_PRIORITY_LOWEST = 1,
+	HTTP_REQUEST_PRIORITY_BELOW_NORMAL = 2,
+	HTTP_REQUEST_PRIORITY_NORMAL = 3,
+	HTTP_REQUEST_PRIORITY_ABOVE_NORMAL = 4,
+	HTTP_REQUEST_PRIORITY_HIGHEST = 5,
+	HTTP_REQUEST_PRIORITY_ULTIMATE = 6,
+	HTTP_REQUEST_PRIORITY_IMMEDIATE = 7,
+};
+
+typedef enum HTTP_REQUEST_SCHEME 
+{
+	HTTP_REQUEST_SCHEME_UNKNOWN,
+	HTTP_REQUEST_SCHEME_HTTP,
+	HTTP_REQUEST_SCHEME_HTTPS
+};
+
+typedef enum HTTP_OUTPUTMODE {
+	HTTP_OUTPUTMODE_FILE,
+	HTTP_OUTPUTMODE_MEMORY,
+};
+
+typedef enum HTTP_INPUTMODE {
+	HTTP_INPUTMODE_NONE,
+	HTTP_INPUTMODE_FILE,
+	HTTP_INPUTMODE_MEMORY,
+};
+
+typedef enum HTTP_REQUEST_TYPE
+{
+	HTTP_REQUEST_TYPE_GET,
+	HTTP_REQUEST_TYPE_POST,
+	HTTP_REQUSET_TYPE_HEAD,
+	HTTP_REQUEST_TYPE_PUT,
+	HTTP_REQUEST_TYPE_OPTIONS,
+	HTTP_REQUEST_TYPE_PATCH,
+	HTTP_REQUEST_TYPE_DELETE,
+	HTTP_REQUEST_TYPE_COUNT,
+};
